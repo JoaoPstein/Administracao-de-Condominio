@@ -17,6 +17,7 @@
     },
     "Admnistracao.Condominio.Web": {
       "commandName": "Project",
+      "launchUrl": "swagger/index.html",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
