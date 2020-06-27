@@ -1,11 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Admnistracao.Condominio.Domain.Reserva.Entidade;
+using Microsoft.EntityFrameworkCore;
 
 namespace Admnistracao.Condominio.Infra.Context
 {
-    public class MainContext : DbContext
+    public class MainContext : BaseContext
     {
-        public MainContext(DbContextOptions options) : base(options)
+        public MainContext(DbContextOptions<MainContext> options) : base(options)
         {
+
+
         }
+
+        public DbSet<ReservaBE> Reservas { get; set; }         
     }
 }

@@ -1,6 +1,9 @@
+using Administracao.Condominio.Infra.CrossCutting.Ioc;
+using Admnistracao.Condominio.Infra.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,9 +25,10 @@ namespace Admnistracao.Condominio.Web
             services.AdicionarServicoSwagger();
             services.AdicionarConfiguracaoAutoMapeamento();
             services.AdicionarBancoDados(Configuration.GetConnectionString("Default"));
+            services.AddIoCApplication();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MainContext context)
         {
             if (env.IsDevelopment())
             {
@@ -33,6 +37,7 @@ namespace Admnistracao.Condominio.Web
             app.UseMvc();
             app.UsarServicoSwagger();
             app.UseHttpsRedirection();
+            context.Database.Migrate();
         }
     }
 }

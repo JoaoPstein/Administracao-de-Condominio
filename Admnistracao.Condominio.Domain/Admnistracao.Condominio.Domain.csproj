@@ -5,9 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Validation\" />
+    <Compile Remove="Entities\**" />
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="Validation\**" />
+    <EmbeddedResource Remove="Entities\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Validation\**" />
+    <None Remove="Entities\**" />
+    <None Remove="Interfaces\**" />
+    <None Remove="Validation\**" />
   </ItemGroup>
 
 </Project>
