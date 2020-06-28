@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admnistracao.Condominio.Web", "Admnistracao.Condominio.Web\Admnistracao.Condominio.Web.csproj", "{2128F0B0-D833-4FD7-B35F-CD0B9DE3211F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admnistracao.Condominio.Domain", "Admnistracao.Condominio.Domain\Admnistracao.Condominio.Domain.csproj", "{0A21724A-CA54-48C8-B9A7-184FFE975DDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Administracao.Condominio.Domain", "Admnistracao.Condominio.Domain\Administracao.Condominio.Domain.csproj", "{0A21724A-CA54-48C8-B9A7-184FFE975DDB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admnistracao.Condominio.Infra", "Admnistracao.Condominio.Infra\Admnistracao.Condominio.Infra.csproj", "{628B2B9E-6D38-4649-A6BA-89D05ABE1888}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admnistracao.Condominio.Test", "Admnistracao.Condominio.Test\Admnistracao.Condominio.Test.csproj", "{0D81FDF6-39EA-4198-8CD0-E39A78CF8FEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administracao.Condominio.Service", "Administracao.Condominio.Service\Administracao.Condominio.Service.csproj", "{6CCBF82D-F9AC-48AD-802D-A2E33B9F4ABD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Administracao.Condominio.Service", "Administracao.Condominio.Service\Administracao.Condominio.Service.csproj", "{6CCBF82D-F9AC-48AD-802D-A2E33B9F4ABD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administracao.Condominio.Infra.CrossCutting", "Administracao.Condominio.Infra.CrossCutting\Administracao.Condominio.Infra.CrossCutting.csproj", "{3DB54F22-1D35-49ED-953E-EF46B9B1B544}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Administracao.Condominio.Infra.CrossCutting", "Administracao.Condominio.Infra.CrossCutting\Administracao.Condominio.Infra.CrossCutting.csproj", "{3DB54F22-1D35-49ED-953E-EF46B9B1B544}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

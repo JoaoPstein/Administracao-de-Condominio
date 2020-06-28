@@ -24,6 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Administracao.Condominio.Service\Administracao.Condominio.Service.csproj" />
-    <ProjectReference Include="..\Admnistracao.Condominio.Domain\Admnistracao.Condominio.Domain.csproj" />
+    <ProjectReference Include="..\Admnistracao.Condominio.Domain\Administracao.Condominio.Domain.csproj" />
   </ItemGroup>
 </Project>

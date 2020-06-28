@@ -3,21 +3,23 @@ using Admnistracao.Condominio.Domain.Interface;
 using Admnistracao.Condominio.Domain.Reserva.Entidade;
 using Admnistracao.Condominio.Domain.Reserva.Interfaces.Repository;
 using Admnistracao.Condominio.Domain.Reserva.Interfaces.Service;
+using System.Threading.Tasks;
 
 namespace Administracao.Condominio.Service.Reserva.Service
 {
     public class ReservaService : BancoDadosService<ReservaBE>, IReservaService
     {
-        private readonly IReservaRepository repository;
+        private readonly IReservaRepository _repository;
 
-        public ReservaService(IReservaRepository _repository, IUnitOfWork unitOfWork) : base(_repository, unitOfWork)
+        public ReservaService(IReservaRepository repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
         {
-            repository = _repository;
+            _repository = repository;
         }
 
-        public void SalvarReserva(ReservaBE reserva)
+        public async Task SalvarReserva(ReservaBE reserva)
         {
-            repository.SalvarReserva(reserva);
+            await _repository.Incluir(reserva);
+            await _unitOfWork.Commit();
         }
     }
 }

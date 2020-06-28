@@ -3,6 +3,7 @@ using Admnistracao.Condominio.Domain.Reserva.Interfaces.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Threading.Tasks;
 
 namespace Admnistracao.Condominio.Web.Reserva.Controller
 {
@@ -20,9 +21,9 @@ namespace Admnistracao.Condominio.Web.Reserva.Controller
         [HttpPost]
         [SwaggerResponse(201, type: typeof(HttpResponse))]
         [SwaggerResponse(400, type: typeof(HttpResponse))]
-        public void SalvarReserva(ReservaBE reserva)
+        public async Task SalvarReserva(ReservaBE reserva)
         {
-            reservaService.SalvarReserva(reserva);
+            await reservaService.SalvarReserva(reserva);
         }
     }
 }

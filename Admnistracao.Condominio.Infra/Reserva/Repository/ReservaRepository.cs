@@ -2,6 +2,7 @@
 using Admnistracao.Condominio.Domain.Reserva.Interfaces.Repository;
 using Admnistracao.Condominio.Infra.Context;
 using Admnistracao.Condominio.Infra.Repository;
+using System.Threading.Tasks;
 
 namespace Admnistracao.Condominio.Infra.Reserva.Repository
 {
@@ -12,9 +13,9 @@ namespace Admnistracao.Condominio.Infra.Reserva.Repository
 
         }
 
-        public void SalvarReserva(ReservaBE reserva)
+        public async Task SalvarReserva(ReservaBE reserva)
         {
-            
+            await _contexto.AddAsync(reserva);
         }
     }
 }
